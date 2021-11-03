@@ -1,0 +1,20 @@
+.play{
+    display: flex;
+    justify-content: space-between;
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: center;
+}
+.letter {
+  width: 22%;
+  margin: 3px;
+  height: 40px;
+}
+.guess {
+  font-size: 3rem;
+  padding: 0 4rem;
+}
