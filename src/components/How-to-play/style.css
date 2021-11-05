@@ -1,0 +1,15 @@
+.howtoplay{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height:50px;
+    align-items: center;
+    font-size: 3rem;
+    font-family: "Bungee";
+}
+
+.howtoplay p{
+    font-size: 2rem;
+    margin: 0;
+    text-align: left;
+}
