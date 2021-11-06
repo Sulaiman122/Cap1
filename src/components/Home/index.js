@@ -1,10 +1,13 @@
 import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
+import bttn from "../../image/button.mp3";
 
 const Home = () => {
   return (
     <div className="container">
+      <audio className="btn" autoPlay="autoplay" src={bttn}></audio>
+
       <div className="title">
         <p className="nameGameB">H</p> <p className="nameGameR">A</p>{" "}
         <p className="nameGameB">NGM</p>

@@ -11,6 +11,7 @@ import image6 from "../../image/Untitled6.png";
 import image7 from "../../image/Untitled7.png";
 import correctSound from "../../image/correct.wav";
 import incorrectSound from "../../image/incorrect.mp3";
+import bttn from "../../image/button.mp3";
 
 const Play = () => {
   const history = useHistory();
@@ -54,21 +55,18 @@ const Play = () => {
   let str;
   let correctSounds = document.getElementById("CorrectAudio");
   let wrongSounds = document.getElementById("IncorrectAudio");
-
-  useEffect(() => {}, [setpicIndex]);
+  const play = (x) => {
+    x.play();
+  };
   const letterPressed = (index) => {
     document.getElementById(`${index}`).style.visibility = "hidden";
     if (word.includes(letters[index])) {
-      window.onload = () => {
-        correctSounds.play();
-      };
+      play(correctSounds);
       str = dashes.split("");
       str[word.indexOf(letters[index])] = letters[index];
       setDashes(str.join(""));
     } else {
-      window.onload = () => {
-        wrongSounds.play();
-      };
+      play(wrongSounds);
       setguesses(guesses - 1);
       setpicIndex(picIndex + 1);
     }
@@ -96,6 +94,7 @@ const Play = () => {
 
   return (
     <div className="container">
+      <audio className="btn" autoPlay="autoplay" src={bttn}></audio>
       <audio id="CorrectAudio">
         <source src={correctSound} />
       </audio>

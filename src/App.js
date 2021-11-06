@@ -11,16 +11,18 @@ import sound from "./image/audio.mp3";
 import { useEffect } from "react";
 
 function App() {
-  window.onload = () =>{
-    var background = document.getElementById("backgroundSound");
+
+  useEffect(() => {
+    let background = document.getElementById("backgroundSound");
     background.volume = 0.2;
-  }
+  }, []);
+
   return (
     <div className="App">
       <audio
         id="backgroundSound"
         src={sound}
-        autoplay="autoplay"
+        autoPlay="autoplay"
         loop="loop"
       ></audio>
       <Switch>

@@ -14,12 +14,8 @@ const Won = () => {
         <p className="nameGameR">A</p> <p className="nameGameB">N</p>
       </div>
       <div className="homeResult">
-        <img
-          src={imgaeWon}
-          alt="won"
-          style={{ width: "400px", marginTop: "20px" }}
-        />
-        <div class="links">
+        <img className="wonImage" src={imgaeWon} alt="won" />
+        <div className="links">
           <h1>
             <Link to="/Categ" className="LinkResult">
               Try Again

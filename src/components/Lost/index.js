@@ -15,7 +15,7 @@ const Lost = () => {
       </div>
       <div className="homeResult">
         <div className="imageLost">
-          <img src={imageLost}  alt="scary"/>
+          <img src={imageLost} alt="scary" />
         </div>
         <div class="links">
           <h1>
