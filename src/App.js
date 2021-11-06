@@ -8,14 +8,22 @@ import Categ from "./components/Categories";
 import Howplay from "./components/How-to-play";
 import About from "./components/About";
 import sound from "./image/audio.mp3";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
 
-  useEffect(() => {
-    let background = document.getElementById("backgroundSound");
-    background.volume = 0.2;
-  }, []);
+
+    const [runIt, setrunIt] = useState(false)
+
+    useEffect(() => {
+      var background = document.getElementById("backgroundSound");
+      background.volume = 0.2;
+      background.play();
+      console.log('got excuted');
+    }, [runIt]);
+    const run=()=>{
+      setrunIt(true);
+    }
 
   return (
     <div className="App">
@@ -23,6 +31,7 @@ function App() {
         id="backgroundSound"
         src={sound}
         autoPlay="autoplay"
+        onCanPlayThrough={run}
         loop="loop"
       ></audio>
       <Switch>
